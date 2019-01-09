@@ -1,0 +1,8 @@
+{
+  "name": "welcome-ecs",
+  "version": "1.0.0",
+  "description": "aliyun welcome",
+  "main": "index.js",
+  "author": "vincent",
+  "license": "MIT"
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>welcome vincent ecs</title>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <link href="index.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+    <script type="text/babel">
+        class Welcome extends React.Component {
+
+            constructor(props) {
+                super(props)
+                this.state = {
+                    currentDate: new Date().toUTCString()
+                }
+            }
+
+            componentWillMount () {
+                this.timer = setInterval(() => {
+                    this.setState({ currentDate: new Date().toUTCString() })
+                }, 1000)
+            }
+
+            render() {
+                return (
+                    <div>
+                        <h1>Welcome vincent ecs</h1>
+                        <h2>Current server time: { this.state.currentDate }</h2>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(<Welcome/>, document.body);
+    </script>
+    </body>
+</html>
